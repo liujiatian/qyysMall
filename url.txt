@@ -1,42 +1,37 @@
-√    "pages/index/index",//首页
-√    "pages/payForTheOrder/payForTheOrder",//支付订单
-     "pages/OrderToDetermine/OrderToDetermine",//订单确定
-√    "pages/index-my/index-my",//我的
-√    "pages/verifyPhone/verifyPhone",//修改手机号
-√    "pages/aboutstore/aboutstore",//关于商城
-√    "pages/security/security",//账户安全
-     "pages/productDetails/productDetails",//产品详情
-√    "pages/index-storewide/index-storewide", //全部商品
-√    "pages/perInformation/perInformation",//个人信息
-     "pages/index-Cart/index-Cart",//购物车
-     "pages/myOrder/myOrder",//我的订单
-不做    "pages/settleOrder/settleOrder",//订单
-不做    "pages/bigGun/bigGun",//天天赚享达人
-不做    "pages/commissionWithdrawal/commissionWithdrawal",//佣金提现
-不做    "pages/bringrcorde/bringrcorde",//提现记录
-不做    "pages/bringranking/bringranking",//排行榜
-√    "pages/classify/classify",//分类
-     "pages/evaluateOrder/evaluateOrder",//订单评价
-     "pages/orderDetails/orderDetails",//订单详情
-     "pages/logistics/logistics",//查看物流
-√     "pages/revisionPhone/revisionPhone"//编辑社交账号
-√    "pages/index-special/index-special",//优惠活动
-     "pages/promotiondetetails/promotiondetetails",//优惠活动详情 
-√    "pages/productReview/productReview",//产品评论
-√   "pages/advisory/advisory",//我的咨询
-√    "pages/revisionname/revisionname",更改个人姓名
-√   "pages/intergral/intergral",//积分
-√   "pages/serviceRegulations/serviceRegulations",//使用规则
-√   "pages/discount/discount",//优惠券
-  "pages/activityproductlist/activityproductlist"//团购列表页
-  "pages/myAddress/myAddress"//收货地址
-  "pages/paySuccess/paySuccess"//支付成功提示页
-  "pages/addNewAddress/addNewAddress"//新增收货地址页
-  "pages/promotionGoods/promotionGoods"//优惠产品详情
-  "pages/GroupPurchase/GroupPurchase"//团购详情
-  "pages/myGroupbuy/myGroupbuy"//我的团购
-
-//后台服务器地址
-https://ssl.lucentury.cn
-
-//https://api.weixin.qq.com/sns/jscode2session?appid=wx41f744e9dd8c0471&secret=ccbc4e3ae65b6c8df8dc4e17872f4d27&js_code=' + code +'&grant_type=authorization_code',
+"pages/index/index",//首页
+"pages/payForTheOrder/payForTheOrder",//支付订单
+"pages/OrderToDetermine/OrderToDetermine",//订单确定
+"pages/index-my/index-my",//我的
+"pages/verifyPhone/verifyPhone",//修改手机号
+"pages/aboutstore/aboutstore",//关于商城
+"pages/security/security",//账户安全
+"pages/productDetails/productDetails",//产品详情
+"pages/index-storewide/index-storewide", //全部商品
+"pages/perInformation/perInformation",//个人信息
+"pages/index-Cart/index-Cart",//购物车
+"pages/myOrder/myOrder",//我的订单
+"pages/settleOrder/settleOrder",//订单
+"pages/bigGun/bigGun",//天天赚享达人
+"pages/commissionWithdrawal/commissionWithdrawal",//佣金提现
+"pages/bringrcorde/bringrcorde",//提现记录
+"pages/bringranking/bringranking",//排行榜
+"pages/classify/classify",//分类
+"pages/evaluateOrder/evaluateOrder",//订单评价
+"pages/orderDetails/orderDetails",//订单详情
+"pages/logistics/logistics",//查看物流
+"pages/revisionPhone/revisionPhone"//编辑社交账号
+"pages/index-special/index-special",//优惠活动
+"pages/promotiondetetails/promotiondetetails",//优惠活动详情 
+"pages/productReview/productReview",//产品评论
+"pages/advisory/advisory",//我的咨询
+"pages/revisionname/revisionname",更改个人姓名
+"pages/intergral/intergral",//积分
+"pages/serviceRegulations/serviceRegulations",//使用规则
+"pages/discount/discount",//优惠券
+"pages/activityproductlist/activityproductlist"//团购列表页
+"pages/myAddress/myAddress"//收货地址
+"pages/paySuccess/paySuccess"//支付成功提示页
+"pages/addNewAddress/addNewAddress"//新增收货地址页
+"pages/promotionGoods/promotionGoods"//优惠产品详情
+"pages/GroupPurchase/GroupPurchase"//团购详情
+"pages/myGroupbuy/myGroupbuy"//我的团购
