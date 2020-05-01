@@ -1,0 +1,12 @@
+<!--pages/revisionPhone/revisionPhone.wxml-->
+<view class="content">
+  <form bindsubmit="formSubmit">
+    <view class="revosionphoen">
+      <input type='text' name="socialAccount" placeholder='请输入社交账号' value='{{socialAccount}}'></input>
+    </view>
+    <button formType='submit'  class="save_phone">
+       保存
+     </button>
+  </form>
+</view>
+

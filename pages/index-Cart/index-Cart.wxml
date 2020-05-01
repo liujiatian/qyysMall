@@ -1,0 +1,70 @@
+<!--pages/index-Cart/index-Cart.wxml 购物车-->
+<!-- 编辑 -->
+<view class='compile'>
+  <view bindtap='compileSite' class='compileSite'>
+    <image src='../../img/Profile.png'></image>
+    {{shoppingRedactGps}}
+  </view>
+  <view bindtap='compileText' class='compileText' style='{{shoppingRedact?"color:#fa4f52;":""}}'>{{shoppingRedactText}}</view>
+</view>
+
+<!-- 购物车商品 -->
+<scroll-view class='ShowCart' scroll-y='true'>
+  <view class='goods' wx:for='{{shoppingAttr}}' wx:key='{{item.goodsId}}'>
+    <view class='goodsView' style='{{item.Activity.if == true?"border-bottom:1rpx dashed #e5e5e5":""}}'>
+      <checkbox-group bindchange='goodsClose' data-index='{{index}}' data-id='{{item.goodsId}}'>
+        <label class='goodsLabel' wx:if='{{!shoppingRedact}}'><checkbox checked='{{item.goodsClose}}' value='true'></checkbox></label>
+        <label class='goodsLabel' wx:if='{{shoppingRedact}}'><checkbox checked='{{item.goodsRemove}}' value='true'></checkbox></label>
+      </checkbox-group>
+      <view class='goodsImg'><image src='{{item.goodsImg}}'></image></view>
+      <view class='goodsData'>
+        <view class='goodsName'>{{item.goodsName}}</view>
+        <view class='productSpecName'>{{item.productSpecName}}</view>
+        <view class='goodsPrice'>￥{{item.goodsPrice}}</view>
+        <view class='goodsNum' wx:if='{{!shoppingRedact}}'>
+          <view class='goodsNumMinus' data-index='{{index}}' bindtap='goodsNumMinus'>-</view>
+          <view class='goodsNumNumber'>{{item.goodsNum}}</view>
+          <view class='goodsNumAdd' data-index='{{index}}' bindtap='goodsNumAdd'>+</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if='{{item.Activity.if}}' class='complimentary'>
+      <text>{{item.Activity.span}}</text> {{item.Activity.dataText}}
+    </view>
+  </view>
+  <view wx:if='{{shoppingBe}}' class='anonymous'>
+    <image src='../../img/anonymous.png'></image>
+    <text>暂无记录</text>
+  </view>
+</scroll-view>
+
+<!-- 结算删除操作 -->
+<view class='operation'>
+  <!-- 购物车 -->
+  <view class='operationView' wx:if='{{!shoppingRedact}}'>
+    <view class='checkAll'>
+      <label>
+        <checkbox-group bindchange='checkAll'>
+          <checkbox checked='{{shoppingAttrAll}}' />全选
+        </checkbox-group>
+      </label>
+    </view>
+    <view class='total'>
+      合计
+      <text>￥{{shoppingAttrTotal}}</text>
+    </view>
+    <view class='operationBtn' bindtap='ToSettleAccounts'>去结算<text> ( {{shoppingAttrSelected}}件 ) </text></view>
+  </view>
+
+  <!-- 删除列表 -->
+  <view class='operationView' wx:if='{{shoppingRedact}}'>
+    <view class='checkAll'>
+      <label>
+        <checkbox-group bindchange='checkAll'>
+          <checkbox checked='{{shoppingRedactAll}}' />全选
+        </checkbox-group>
+      </label>
+    </view>
+    <view class='operationBtn' bindtap='checkAllFalseTap'>删除</view>
+  </view>
+</view>

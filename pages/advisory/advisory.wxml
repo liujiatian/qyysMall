@@ -1,0 +1,35 @@
+<view class="container">
+ <!-- 导航栏切换部分 -->
+ <view class="navtop">
+    <block wx:for="{{navlist}}" wx:key='advisory'>
+      <view class="shipments {{navactivenum==item.navindex ? 'activenavtop':''}}" bindtap='acnavfun' data-index="{{item.navindex}}">
+          {{item.navtext}}
+      </view>
+    </block>
+    <view class='goodsTabSliding' style='margin-left:{{(navactivenum)*25+"%"}};'></view>
+ </view>
+ <!-- 咨询列表 -->
+ <view class='alllist'  wx:if='{{statusnum==0}}'>
+   <block wx:for="{{zixunarr}}" wx:key='zixunarr'>
+   <view class='zili'>
+      <view class="titlegoods">
+        <text class='danfu0' wx:if='{{item.consultType==1}}'>商品资讯</text>
+        <text class='danfu0'  wx:elif='{{item.consultType==2}}'>配送咨询</text>
+        <text  class='danfu0' wx:else>售后咨询</text>
+        <text class='danfu1'>{{item.replyStatus==1?"已回复":"未回复"}}</text>
+      </view>
+      <view>
+        <text class='goodsname'>{{item.productName}}</text>
+        <view>
+         <text class="neir">{{item.buyConsult}}</text>
+        </view>
+      </view>
+    </view>
+    </block>
+ </view>
+ <!-- 没有咨询的信息 -->
+ <view class="nowuimg" wx:elif='{{statusnum==1}}'>
+   <image src="{{nocontentimg}}"></image>
+   <text>{{notextcontitle}}</text>
+ </view>
+</view>

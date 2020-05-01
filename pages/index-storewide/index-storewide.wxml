@@ -1,0 +1,58 @@
+<!--pages/index-storewide/index-storewide.wxml 全部商品-->
+
+<!-- 搜索区块 -->
+<view class='seek'>
+  <input id='seo' bindconfirm='seoInput' confirm-type='search' placeholder='请输入商品名称' />
+  <view id='tabType' bindtap='tabType'>
+    <image src='{{atPresentImg}}'></image>
+  </view>
+</view>
+
+<!-- 商品tab -->
+<view class='goodsTab'>
+  <view bindtap='goodsTabColor' class='{{goodsTabNum==1?"goodsTabColor":""}}' data-index='1'>分类</view>
+  <view bindtap='goodsTabColor' class='{{goodsTabNum==2?"goodsTabColor":""}}' data-index='2'>新品</view>
+  <view bindtap='goodsTabColor' class='{{goodsTabNum==3?"goodsTabColor":""}}' data-index='3'>销量</view>
+  <view bindtap='goodsTabColor' class='{{goodsTabNum==4?"goodsTabColor":""}}' data-index='4'>价格</view>
+  <view bindtap='goodsTabColor' class='{{goodsTabNum==5?"goodsTabColor":""}}' data-index='5'>筛选</view>
+</view>
+<!-- 商品tab滑块 -->
+<view class='goodsTabSliding' style='margin-left:{{(goodsTabNum-1)*20+"%"}};'></view>
+
+<!-- 商品列表滚动区块 -->
+<scroll-view id='merchandise' class='merchandise {{merchandiseModel==2?"merchandiseModel":""}}' scroll-y='ture' scroll-top='{{scrollTop}}' bindscroll='goodsLoadScroll' bindscrolltolower='goodsLoadMore' scroll-with-animation='ture'>
+  <view class='article' wx:for="{{goodsAttr}}" wx:key="*this" data-id='{{item.goodsId}}' bindtap='goodsUrl'>
+    <view class='goodsImg'><image src='{{item.goodsImg}}' data-index='{{index}}' binderror="errorFunction"></image></view>
+    <view class='Description'>
+      <view class='goodsName'>{{item.goodsName}}</view>
+      <view class='goodsPrice'>￥{{item.goodsPrice}}</view>
+      <view class='goodsSales'>销量:{{item.goodsSales}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<!--返回顶部-->
+<view id='returnTop' wx:if='{{returnTop}}' bindtap='returnTop'>
+  <image src='../../img/returnTop.png'></image>
+</view>
+
+<!-- 筛选 -->
+<view class='screenFrame' wx:if='{{screenFrame}}'>
+  <view class='screen_Back' bindtap='screen_Back'></view>
+  <view class='screen_Frame'>
+    <text class='screen_Nav'>筛选</text>
+    <view class='screen_Condition Price'>
+      <text>价格区间（元）</text>
+      <view>
+        <input bindinput='screenMin' value='{{screenMin}}' type='number' search='完成' placeholder='0'/>
+        -
+        <input bindinput='screenMax' value='{{screenMax}}' class='PriceRight' type='number' search='完成' placeholder='10000'/>
+      </view>
+    </view>
+    <!-- 完成 -->
+    <view class='screen_yes'>
+      <view bindtap='screen_Return' style='background-color:#ffa479;'>重置</view>
+      <view bindtap='screen_Back' style='background-color:#fc6821;'>完成</view><!--screen_DataYes -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/activityproductlist/activityproductlist.wxml-->
+<view class='commodity' wx:key='*this' wx:for='{{product}}'>
+  <view class='title'><text>团购商品</text></view>
+  <view class='product'>
+    <image src='{{item.activityProductImage}}' data-index='{{index}}'  binderror="errorFunction"></image>
+    <view class='productDetails'>
+      <view class='tradeName'><text>{{item.activityProductName}}</text></view>
+      <view class='market'><text>销量：{{item.salesNumber}}</text></view>
+      <view class='Price'><text style="color:#fa4f52;margin-right:7px;">￥{{item.activityProductPrice}} </text><text style="color:#999;text-decoration: line-through;">￥{{item.marketPrice}}</text></view>
+      <view bindtap='purchaseNow' class='purchaseNow' data-index='{{index}}'>
+        <image src='../../img/lijigoum.png'/>
+        <text>立即购买</text>
+      </view>
+    </view>
+  </view>
+</view>

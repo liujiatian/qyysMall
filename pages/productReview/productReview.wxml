@@ -1,0 +1,30 @@
+<!--pages/productReview/productReview.wxml-->
+<!-- tab切换 -->
+<view class='review'>
+  <view bindtap='review' style='color:{{reviewIndex==0?"#fa4f52":""}}' data-index='0'><text>全部</text></view>
+  <view bindtap='review' style='color:{{reviewIndex==1?"#fa4f52":""}}' data-index='1'><text>好评</text></view>
+  <view bindtap='review' style='color:{{reviewIndex==2?"#fa4f52":""}}' data-index='2'><text>中评</text></view>
+  <view bindtap='review' style='color:{{reviewIndex==3?"#fa4f52":""}}' data-index='3'><text>差评</text></view>
+</view>
+
+<!-- tab下标 -->
+<view class='reviewIndex' style='left:{{reviewIndex==0?"0":reviewIndex==1?"25%":reviewIndex==2?"50%":"75%"}}'></view>
+
+<!-- 评论详情 -->
+<view class='comment' wx:for='{{evaluateAttr}}' wx:key='*this' data-index='{{index}}'>
+  <view class='portrait'>
+    <image src='{{item.portrait}}' />
+    <text>{{item.name}}</text>
+    <text style='float:right;'>{{item.time}}</text>
+  </view>
+  <view class='Stars'><image mode='widthFix' src='{{item.starLevel}}' /></view>
+  <view class='content'><text>{{item.content}}</text></view>
+  <view class='ImageCollection'>
+    <image src='{{item_Image}}' wx:if='{{item_Image!=""}}' wx:for='{{item.ImageCollection}}' wx:for-item='item_Image' wx:key='{{index}}' />
+  </view>
+</view>
+
+<!-- 暂无评论 -->
+<view class='NoComments' wx:if='{{NoComments}}'>
+  <text>暂无评论</text>
+</view>

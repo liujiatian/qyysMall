@@ -1,0 +1,81 @@
+<!--pages/OrderToDetermine/OrderToDetermine.wxml-->
+<!-- 视图窗口 -->
+<scroll-view class='Viewports' scroll-y='true' enable-back-to-top='true'>
+  <!-- 收货地址 -->
+  <view class='Profile' bindtap='Profile'>
+    <text>{{Profile}}</text>
+    <image src='../../img/rightArrow.png'/>
+  </view>
+  <image class='caixian' src='../../img/caixian.png'/>
+  
+  <view class='halvingLine'></view>
+
+  <!-- 产品清单 -->
+  <view class='productList'><text>产品清单（{{productList}}）</text></view>
+
+  <!-- 产品 -->
+  <view class='product' wx:for='{{product}}' wx:key='*this' data-id='{{item.productId}}'>
+    <image class='productImg' src='{{item.productImg}}' />
+    <view>
+      <view><text class='productName'>{{item.productName}}</text></view>
+      <text class='productSpecification'>规格：{{item.productSpecification}}</text>
+      <view class='NumberPrice'>
+        <text class='productPrice'>￥{{item.productPrice}}</text>
+        <text class='fr productCount'>x{{item.productCount}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单备注 -->
+  <view class='OrderComment'>
+    <text>添加订单备注：</text>
+    <textarea bindblur='Message' ></textarea>
+  </view>
+  
+  <view class='halvingLine'></view>
+
+  <!-- 物流方式 -->
+  <!-- <picker class='singleLink' bindchange="logisticsModeAttr" value="{{index}}" range="{{logisticsModeAttr}}">
+    <text>物流方式</text>
+    <view class='fr rightArrow'>
+      <image src='../../img/rightArrow.png'/>
+    </view>
+    <text class='fr'>{{logisticsModeAttr[logisticsModeAttrIndex]}}</text>
+  </picker> -->
+
+  <!-- 支付方式 -->
+  <picker class='singleLink' bindchange="PaymentAttr" value="{{index}}" range="{{PaymentAttr}}">
+    <text>支付方式</text>
+    <view class='fr rightArrow'>
+      <image src='../../img/rightArrow.png'/>
+    </view>
+    <text class='fr'>{{PaymentAttr[PaymentAttrIndex]}}</text>
+  </picker>
+
+   <!-- 优惠卷 -->
+  <view class='singleLink'>
+    <text>优惠卷</text>
+    <view class='fr rightArrow'>
+      <image src='../../img/rightArrow.png'/>
+    </view>
+    <text class='fr'>暂无优惠卷</text>
+  </view>
+  
+  <view class='halvingLine'></view>
+
+  <view class='money'>
+    <view><text>产品金额(不含运费)</text><text class='fr'>￥{{AmountOfProduct}}</text></view>
+    <view><text>邮费</text><text class='fr'>+￥{{postage}}</text></view>
+    <view><text>优惠金额</text><text class='fr'>-￥{{coupon}}</text></view>
+  </view>
+
+</scroll-view>
+
+<!-- 操作区 -->
+<view class='handle'>
+  <view class='TotalAmountDue'>应付总金额：<text>￥{{TotalAmountDue}}</text></view>
+  <view class='handleBtn' bindtap='handleBtn'>
+    <text>提交订单</text>
+    <image src='../../img/lijigoum.png'/>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+/* pages/classify/classify.wxss */
+.classify{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.classifyAttr{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.classifyAttr view{
+  font-size: 28rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  line-height: 100rpx;
+  padding:0 15rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.classifyClass1 .classify_2,.classifyClass1 .classify_3{
+  display: none;
+}
+.classifyClass2 .classify_3{
+  display: none;
+}
+.classifyClass2 .classify_1{
+  width: 20%;
+  left: 0;
+  border-right: 1rpx solid #e5e5e5;
+}
+.classifyClass2 .classify_2{
+  width: 80%;
+  left: 20%;
+}
+.classifyClass3 .classify_1{
+  width: 20%;
+  left: 0%;
+  border-right: 1rpx solid #e5e5e5;
+}
+.classifyClass3 .classify_2{
+  width: 20%;
+  left: 20%;
+  border-right: 1rpx solid #e5e5e5;
+}
+.classifyClass3 .classify_3{
+  width: 60%;
+  left: 40%;
+}

@@ -1,0 +1,150 @@
+/* mine.wxss */
+.container{
+	background-color:#fff;
+}
+.bg-box{
+	width: 100%;
+	height: 342rpx;
+	position: relative;
+}
+.bgpic{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.shezhiimg{
+  width:60rpx;
+  height:60rpx;
+  position:absolute;
+  top:20rpx;
+  right:20rpx;
+  z-index: 9999999;
+}
+.shezhiimg image{
+  width: 100%;
+  height:100%;
+}
+.personalmsg{
+	position: relative;
+	z-index: 5;
+  height: 320rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.headView {
+  overflow:hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.nickname{
+	color: #fff;
+}
+.mylsit{
+	padding: 20rpx 53rpx 0 53rpx;
+}
+.itembox{
+	overflow: hidden;
+	height: 96rpx;
+	line-height: 96rpx;
+}
+.border{
+	border-top: 1rpx solid #e2e2e2;
+	border-bottom: 1rpx solid #e2e2e2;
+}
+.item-cont{
+	float: left;
+}
+.item-cont image{
+	width: 32rpx;
+	height:32rpx;
+}
+.item-cont text{
+	padding-left: 30rpx;
+	position: relative;
+	top: -5rpx;
+}
+.item-arrow{
+	float: right;
+}
+.item-arrow image{
+	width: 24rpx;
+	height: 24rpx;
+	
+}
+.banner-listimg{
+  width:100%;
+  padding:8px 0;
+  overflow:hidden;
+  border-top:1rpx solid #ddd;
+  border-bottom:1rpx solid #ddd;
+}
+.toimgcl{
+  width:25%;
+  float: left;
+  text-align: center;
+}
+.banner-listimg .toimgcl image{
+  width:60rpx;
+  height:60rpx;
+}
+.chuxiaotext{
+  display:block;
+  font-size:26rpx;
+  color:#666;
+}
+.paygoodshop{
+  overflow: hidden;
+  padding:15rpx 20rpx 10rpx 40rpx;
+}
+.payorder{
+ float: left;
+}
+.payorder image{
+   width:60rpx;
+   height:60rpx;
+}
+.payorder text{
+  line-height:60rpx;
+  display:inline-block;
+  vertical-align:top;
+  margin-left:20rpx;
+  font-size:26rpx;
+  color:#666;
+}
+.payorderdetile{
+float: right;
+}
+.payorderdetile image{
+ width:40rpx;
+height:40rpx;
+margin-top:15rpx;
+}
+.payorderdetile text{
+  line-height:60rpx;
+  display:inline-block;
+  vertical-align:top;
+  margin-right:20rpx;
+  font-size:26rpx;
+  color:#666;
+}
+.messgelist{
+  overflow: hidden;
+  padding:15rpx 0rpx 10rpx 0;
+  border-bottom:1rpx solid #ddd;
+}
+.messgelist .payorder{
+    margin-left:40rpx;
+}
+.messgelist .payorderdetile{
+    margin-right:20rpx;
+}

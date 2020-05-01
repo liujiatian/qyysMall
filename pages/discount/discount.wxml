@@ -1,0 +1,41 @@
+<view class="container">
+ <!-- 导航栏切换部分 -->
+ <view class="navtop">
+    <block wx:for="{{navlist}}" wx:key='discount'>
+      <view class="shipments {{navactivenum==item.navindex ? 'activenavtop':''}}" bindtap='acnavfun' data-index="{{item.navindex}}">
+          {{item.navtext}}
+      </view>
+    </block>
+    <view class='goodsTabSliding' style='margin-left:{{(navactivenum)*25+"%"}};'></view>
+ </view>
+ <!-- 优惠券显示区域 -->
+ <view>
+ <!-- 使用规则 -->
+  <view class='guize'>
+    <view bindtap='toRegulations'>
+     <image src='https://ssl.lucentury.cn/mall/images/wenhao.png'></image>
+      <text>使用规则</text>
+    </view>
+  </view>
+ <!-- 有优惠券数据 -->
+  <view wx:if="{{statusnum==1}}">
+  <block>
+    <view class='discount_list'>
+      <image src='{{cadeimg}}'></image>
+      <view class='discon_left'>
+      
+      </view>
+      <view class='discon_right'>
+      
+      </view>
+    </view>
+  </block>
+  </view>
+ <!-- 没有优惠券 -->
+  <view class="nowuimg" wx:elif="{{statusnum==0}}">
+    <image src="{{nocontentimg}}"></image>
+    <text>{{notextcontitle}}</text>
+  </view>
+ </view>
+
+</view>

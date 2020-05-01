@@ -1,0 +1,10 @@
+<!--pages/serviceRegulations/serviceRegulations.wxml-->
+<view class='content'>
+  <view class='gltitle'>优惠券使用规则</view>
+  <block wx:for="{{discountReg}}" wx:key='discountReg'>
+      <view class='gllist'>
+        <text>{{index+1}}、</text>
+        {{item}}
+      </view>
+  </block>
+</view>

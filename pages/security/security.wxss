@@ -1,0 +1,32 @@
+/* pages/security/security.wxss */
+page{
+  background:#fafafa;
+  width:100%;
+  height:100%;
+}
+.conetnt{
+   width:100%;
+  height:100%;
+  font-size: 28rpx;
+  color: #666;
+}
+.veyphone{
+  background-color: #fff;
+  padding:30rpx 40rpx;
+  margin: 20rpx 0;
+}
+.veyphone view {
+  padding-top:50rpx
+}
+.aboutstore{
+  background-color: #fff;
+  padding:30rpx 40rpx;
+}
+.aboutstore image{
+  width:30rpx;
+  height:30rpx;
+  float:right;
+}
+.cellPhone{
+  float:right;
+}

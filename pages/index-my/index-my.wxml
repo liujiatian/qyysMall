@@ -1,0 +1,50 @@
+<!--mine.wxml-->
+<view class="container">
+<!-- 个人信息/背景图 -->
+	<view class="bg-box">
+		<image class="bgpic" src="{{bgimg}}"></image>
+		<view class="personalmsg">
+      <view class="headView">
+      <open-data type="userAvatarUrl"  class="personheadimg" lang="en"></open-data>
+      </view>
+    <open-data type="userNickName"   class="nickname" lang="en"></open-data>
+		</view>
+    <view class="shezhiimg" bindtap='toshezhinavurl'><image src="{{bgsgezhiimg}}"></image></view>
+	</view>
+  <!-- 个人订单和订购商品信息 -->
+  <view class="paygoodshop"  bindtap='navigatetopersonwuliu'>
+      <view class="payorder">
+        <image src="{{minorder[0].doerlogo}}"></image>
+        <text>{{minorder[0].ordertext}}</text>
+      </view>
+      <view class="payorderdetile">       
+        <text>{{minorder[0].storewide}}</text>
+        <image src="{{minorder[0].todelimg}}"></image>
+      </view>
+  </view>
+  <!-- 收货物流情况 -->
+ <view class="banner-listimg">   
+      <block wx:for="{{tabnav}}"  wx:key='mynav'>
+        <view class="toimgcl" data-index="{{item.index}}" bindtap='navigatetowuliu'>
+          <image src="{{item.navimg}}"></image>
+          <text class="chuxiaotext" >{{item.navetext}}</text>
+      </view> 
+      </block>  
+  </view>
+  <!-- 我的信息，优惠券等列表 -->
+  <view>
+   <block wx:for="{{minessgto}}"  wx:key='*this'>
+      <view class="messgelist" data-index="{{item.index}}" bindtap='navigatetopage'>
+        <view class="payorder">
+          <image src="{{item.doerlogo}}"></image>
+          <text>{{item.ordertext}}</text>
+        </view>
+        <view class="payorderdetile">       
+          <text>{{item.storewide}}</text>
+          <image src="{{item.todelimg}}"></image>
+        </view>
+      </view>
+    </block> 
+  </view>
+</view>
+

@@ -1,0 +1,9 @@
+<!--pages/index-special/index-special.wxml-->
+<view id="contentBox">
+  <block wx:for='{{activelistarr}}' wx:key='activelistarr'>
+    <view class="yugou" bindtap='todelurl' data-type="{{item.datatype}}">
+      <image class='yugouimg' src="{{item.yugouimg}}" style='height:{{imgheight}};'></image>
+      <view>{{item.yugoutitle}}</view>
+    </view>
+  </block>
+</view>

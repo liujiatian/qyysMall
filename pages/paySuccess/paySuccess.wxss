@@ -1,0 +1,57 @@
+/* pages/paySuccess/paySuccess.wxss */
+page{background-color:#f8f8f8;}
+.frame{
+  width: calc(100% - 40rpx);
+  margin: 15rpx 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow:0 5rpx 15rpx 3rpx rgba(0,0,0,0.1);
+}
+.paySuccess{
+  padding: 150rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  padding-bottom: 100rpx;
+}
+.paySuccess image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.hyperlink view{
+  display: inline-block;
+  width: 250rpx;
+  height: 60rpx;
+  border: 1rpx solid #fa4f52;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 0 30rpx;
+  border-radius: 5rpx;
+  color: #fa4f52;
+}
+.hyperlink{
+  text-align: center;
+}
+.imaginary{
+  padding-top: 100rpx;
+  border-bottom: 4rpx dashed #e5e5e5;
+  margin: 0 40rpx;
+}
+.attention{
+  padding: 30rpx 60rpx 50rpx 60rpx;
+  position: relative;
+}
+.attention image{
+  width: 180rpx;
+  height: 180rpx;
+  border: 1rpx solid #e5e5e5;
+  box-sizing: border-box;
+}
+.attention view{
+  position:absolute;
+  left:270rpx;
+  top:40rpx;
+  font-size:28rpx;
+  line-height:1.6;
+  color:#666;
+}

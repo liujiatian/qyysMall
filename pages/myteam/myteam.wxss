@@ -1,0 +1,7 @@
+/* pages/myteam/myteam.wxss */
+.mystate{
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  margin-top:180px;
+}

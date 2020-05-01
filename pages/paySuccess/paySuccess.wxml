@@ -1,0 +1,22 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view class='frame'>
+  <view class='paySuccess'>
+    <image src='../../img/paySuccess.png'></image>
+    <view><text>支付成功</text></view>
+  </view>
+
+  <view class='hyperlink'>
+    <view bindtap='returnHome'>返回首页</view>
+  </view>
+
+  <view class='imaginary'></view>
+  <view style='padding-bottom:30rpx;'></view>
+
+  <!-- 关注 -->
+  <view class='attention'>
+    <image src='../../img/erweimayiy.jpg'></image>
+    <view>
+      <text>关注我们的公众号\n第一时间获取最新的活动！\n还有大量优惠卷等你拿！</text>
+    </view>
+  </view>
+</view>

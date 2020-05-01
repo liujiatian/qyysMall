@@ -1,0 +1,40 @@
+/* pages/verifyPhone/verifyPhone.wxss */
+.box{
+  font-size: 26rpx;
+  color: #666;
+  margin-top:60rpx;
+}
+.revisephone{
+  width: 80%;
+  margin:40rpx auto 0 auto;
+  overflow:hidden;
+}
+.revisephone text{
+  float: left;
+  width: 20%;
+  height:1.4rem;
+  line-height:1.4rem;
+}
+.revisephone input{
+  float: left;
+   width: 60%;
+}
+.revise{
+  font-size:30rpx;
+  width:90%;
+  margin:60rpx auto;
+  display:block;
+  height:80rpx;
+  border:none;
+  color:#fff;
+  background-color:#FF5C52;
+  line-height:80rpx;
+  border-radius:80rpx;  
+}
+.revise:affter{
+    border: none;
+}
+.revisephone .verifycode{
+  width:20%;
+  float:right;
+}

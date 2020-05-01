@@ -1,0 +1,48 @@
+<!--pages/index-perInformation/index-perInformation.wxml-->
+<view class="personcontent">
+  <view>
+     <text>头像</text>
+     <view>
+        <open-data type="userAvatarUrl"  class="personheadimg" lang="en"></open-data>
+     </view>
+  </view>
+  <view>
+     <text>昵称</text>
+      <view>
+       <open-data type="userNickName"   class="nickname" lang="en"></open-data>
+     </view>
+  </view>  
+  <view bindtap='revisionname'>
+     <text>姓名</text>
+      <view>
+       <text>{{personname}}</text>
+     </view>
+  </view> 
+  <view>
+     <text>性别</text>
+      <view>
+         <picker class="selesex" bindchange="bindPickerChange" value="{{index}}" range="{{sexarray}}">
+            <text>{{sextext}}</text>
+             <image class="toaddimg" src="{{toaddimg}}"></image>
+          </picker>     
+     </view>
+  </view> 
+  <view>
+     <text>生日</text>
+      <view>
+         <picker mode="date" value="{{defaulttime}}" bindchange="bindDateChange">
+            <text>{{seletime}}</text>
+             <image class="toaddimg" src="{{toaddimg}}"></image>
+          </picker>  
+      </view>
+  </view> 
+  <view bindtap='revisionphone'>
+     <text>社交账号</text>
+      <view>
+       <text>{{socialAccount}}</text>
+     </view>
+  </view> 
+</view>
+
+
+

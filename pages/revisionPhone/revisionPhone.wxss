@@ -1,0 +1,23 @@
+/* pages/revisionPhone/revisionPhone.wxss */
+.content{
+  font-size: 26rpx;
+  color: #666;
+}
+.revosionphoen{
+  width:80%;
+  margin:60rpx auto;
+}
+.revosionphoen input{
+  padding-left:20rpx;
+  border: 1px solid #ddd;
+}
+.save_phone{
+  background-color:#FF5C52;
+  height:70rpx;
+  line-height:70rpx;
+  width:80%;
+  margin:0 auto;
+  color:#fff;
+  text-align:center;
+  border-radius:10rpx;
+}

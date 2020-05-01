@@ -1,0 +1,47 @@
+/* pages/index-perInformation/index-perInformation.wxss */
+.personcontent{
+  font-size:30rpx; 
+  color:#666;
+  padding-top:20rpx;
+}
+.personcontent>view{
+  height: 120rpx;
+  width:100%;
+}
+.personcontent>view>text{
+   line-height: 120rpx;
+   margin-left:30rpx;
+   display:inline-block;
+}
+.personcontent>view view{
+  float: right;
+  margin-right:30rpx;
+  line-height: 120rpx;
+  box-sizing:border-box;
+
+}
+.personcontent>view view text{
+  display:inline-block;
+  line-height: 120rpx;
+}
+.personheadimg{
+  width: 100rpx;
+  height:100rpx;
+  display: block;
+  margin-top: 10rpx;
+}
+.nickname{
+  line-height:120rpx;
+  display: block;
+}
+.toaddimg{
+  width:40rpx;
+  height:40rpx;
+ position: relative;
+ top:10rpx;
+ margin-left:14rpx;
+}
+.selesex{
+  display:inline-block;
+  padding-left:100rpx;
+}

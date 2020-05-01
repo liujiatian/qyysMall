@@ -1,0 +1,51 @@
+<!--pages/addNewAddress/addNewAddress.wxml-->
+<view class="content">
+  <form bindsubmit="formSubmit">
+   <view class="add_data">
+      <text>联系人</text>
+      <input type='text' name="personname" placeholder-class="phcolor" placeholder='请输入联系人姓名' value='{{personname}}'></input>
+    </view>
+    <view class="add_data">
+      <text>联系电话</text>
+      <input type='text' name="socialAccount" placeholder-class="phcolor" placeholder='请输入联系电话' value='{{socialAccount}}'></input>
+    </view>
+    <view class="add_data">
+      <text>收货地址</text>
+      <view class='address_text' bindtap="translate">{{address_tetx}}</view>
+    </view>
+    <view>
+    <textarea placeholder='请填写详细地址，不少于5个字' name='marktext' class='mark_text' value='{{marktext}}'></textarea>
+    </view>
+    <button formType='submit'  class="save_phone">
+       保存
+     </button>
+  </form>
+</view>
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView" data-id="cancel">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView" data-id="sure">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+        <!--省-->
+        <picker-view-column  value="9">
+           <view wx:for="{{provinces}}" wx:key="" >
+             {{item.name}}
+          </view>
+        </picker-view-column>
+        <!--地级市-->
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="" >
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        <!--区县-->
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="" >
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>

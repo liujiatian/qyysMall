@@ -1,0 +1,16 @@
+/* pages/index-special/index-special.wxss */
+.yugou{
+  padding:20rpx;
+  width:100%;
+  box-sizing:border-box;
+}
+.yugou image{
+  width: 100%;
+}
+.yugou view{
+  font-size:28rpx;
+  border-bottom:1rpx solid #F5F5F5;
+  text-align:center;
+  padding:20rpx 0 24rpx 0;
+  color:#7A4BA4;
+}

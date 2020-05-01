@@ -1,0 +1,17 @@
+<!--pages/payForTheOrder/payForTheOrder.wxml-->
+<view class='payForTheOrder'>
+  <view>订单编号：<text>{{orderReference}}</text></view>
+  <view>支付方式：<text>{{modeOfPayment}}</text></view>
+  <view>应付金额：￥<text>{{amountPayable}}</text></view>
+</view>
+
+<view>
+  <text class='modeOfPayment'>选择支付方式</text>
+  <view class='selectModeOfPayment'>
+    <image src='../../img/wxicon.png' />
+    <text>微信支付</text>
+    <icon class='success' type='success' size='23'></icon>
+  </view>
+</view>
+
+<button class='primary' bindtap='primary' type='primary' size='default' loading='{{loading}}'>立即支付</button>

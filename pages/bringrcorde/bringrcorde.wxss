@@ -1,0 +1,36 @@
+/* pages/bringrcorde/bringrcorde.wxss */
+page{
+  widyh:100%;
+  height:100%; 
+}
+.content{
+  width: 100%;
+  height:100%;
+  background-color: #F8F8F8;
+  font-size:26rpx;
+}
+.commission{
+  color:#666;
+  background-color:#fff;
+  padding:70rpx 0;
+}
+.commissionnum{
+  color:#ffc336;
+  text-align:center;
+  margin-bottom:22rpx;
+  font-size:40rpx;
+}
+.commissiontitle{
+  text-align: center;
+}
+.nowmonth{
+  color:#666;
+  display:block;
+  padding:15rpx;
+}
+.nodata{
+  background-color:#fff;
+  color:#999;
+  text-align:center;
+  padding:80rpx 0;
+}

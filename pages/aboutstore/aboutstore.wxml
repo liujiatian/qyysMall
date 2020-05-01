@@ -1,0 +1,10 @@
+<!--pages/aboutstore/aboutstore.wxml-->
+<view class="content">
+  <view class="logos">
+     <image src='{{companylolog}}'></image>
+  </view>
+  <view class="release">当前版本：{{versions}}</view>
+  <view class="edition">{{ornonewversions}}</view>
+	<view class="Companies">{{copyrightuse}}</view>
+	<view class="copyright">{{copyrighttime}}</view>
+</view>

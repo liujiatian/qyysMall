@@ -1,0 +1,12 @@
+<!--pages/revisionname/revisionname.wxml-->
+<view class="content">
+  <form bindsubmit="formSubmit">
+    <view class="revosionphoen">
+      <input type='text' name="name" placeholder='请输入姓名' value='{{personname}}'></input>
+    </view>
+    <button formType='submit'  class="save_phone">
+       保存
+     </button>
+  </form>
+</view>
+

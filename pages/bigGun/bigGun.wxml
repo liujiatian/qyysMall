@@ -1,0 +1,50 @@
+<!--pages/bigGun/bigGun.wxml-->
+<view class="container">
+  <!-- 个人信息/背景图 -->
+	<view class="bg-box">
+		<image class="bgpic" src="{{bgimg}}"></image>
+		<view class="personalmsg">
+      <view class="headView">
+        <open-data type="userAvatarUrl"  class="personheadimg" lang="en"></open-data>
+      </view>
+      <button open-type="share" class="sharecard"></button>
+		</view>
+	</view>
+  <!-- 提现记录展示 -->
+  <view class="withdrawtitle">
+    <view class="commission">
+      <text>可提佣金</text> 
+      <text class="commissionmoney">{{usemoney}}元</text>
+      <text>累计提现 {{accumulativeWithdrawal}}</text>
+    </view>
+    <view class="nousercommission">
+      <text>暂估佣金</text> 
+      <text class="commissionmoney">{{estimationmoney}}元</text>
+      <text>不可提现</text>
+    </view>
+  </view>
+  <!-- 提现 排行 导航条 -->
+  <view class="rankinglist">
+    <view bindtap='bringupmoney'>提现</view>
+    <view bindtap='bringrecorde'>提现记录</view>
+    <view bindtap='bringranking'>排行榜</view>
+  </view>
+  <!-- 订单和团队部分 -->
+  <view class="teamorder">
+      <block wx:for="{{teamorder}}" wx:key='teamorder'>
+        <view class="myorder" bindtap='orderteamdelite'   data-index="{{item.index}}">
+            <view class="temimgurl"><image src='{{item.imgurl}}'></image></view>
+            <view class="allconment">
+              <view class="namcontent">
+                <view>{{item.nametitle}}</view>
+                <text>{{item.context}} {{item.contextnum}}</text>
+              </view>
+              <view class="rightcontent">
+                <text>{{item.righttext}} {{item.righttextnum}}</text>
+                <text class="graderank">{{item.righttexttwo}} {{item.righttexttwonum}}</text>
+              </view>
+            </view>
+        </view>
+      </block>
+  </view>
+</view>

@@ -1,0 +1,140 @@
+/* pages/index-myOrder/index-myOrder.wxss */
+page{
+  width:100%;
+  height:100%;
+}
+.container{
+  width:100%;
+  height:100%;
+  background:#fafafa;
+}
+.container::before{
+  content: "";
+  display: table;
+}
+.navtop{
+  overflow: hidden;
+  width:100%;
+  background:#fff;
+  font-size: 26rpx;
+  color:#666;
+  line-height:85rpx;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:99999;
+}
+.shipments{
+  line-height:80rpx;
+  float:left;
+  width:20%;
+  text-align: center;
+}
+.activenavtop{
+  color:red;
+}
+.goodsTabSliding{
+  width:20%;
+  height:5rpx;
+  background-color:#fa4f52;
+  margin-top:-5rpx;
+  position:relative;
+  transition:all 0.3s;
+  float:left;
+}
+
+.nowuimg{
+  text-align: center;
+  margin-top: 200rpx;
+}
+.nowuimg image{
+    width:220rpx;
+  height:220rpx;
+  display:block;
+  margin:0 auto;
+}
+.nowuimg text{
+  font-size:26rpx;
+  color:#666;
+  padding-top:30rpx;
+  display:block;
+}
+.alldingdan{
+  font-size: 26rpx;
+  color: #666;
+  background:#fafafa;
+  padding-bottom:30rpx;
+  margin-top:98rpx;
+ position:absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  width:100%;
+}
+.scolrlist{
+  height:100%;
+  background:#fff;
+  margin-bottom:20rpx;
+}
+.alldingdan>view{
+  background-color:#fff;
+}
+.orderone{
+  overflow: hidden;
+  padding: 20rpx 30rpx;
+}
+.ordernumber{
+  float: left;
+  font-size: 22rpx;
+}
+.orderstatus{
+  float: right;
+  color: red;
+}
+.goodsmessg{
+  overflow: hidden;
+  padding: 30rpx 30rpx;
+  border-bottom: 1px solid #ddd;
+}
+.goodsmessg>view{
+    float: left;
+}
+.goodurl{
+  width: 20%;
+}
+.goodurl>image{
+width:120rpx;
+height:120rpx;
+}
+.goodsdescribe{
+ width:62%;
+box-sizing:border-box;
+line-height:40rpx;
+}
+.sprice_order{
+  width: 18%;
+}
+.sprice_order>view{
+  text-align: right;
+}
+.goodsprice{
+  margin-bottom:70rpx;
+}
+.total{
+  text-align:right;
+  padding:20rpx;
+  border-bottom:1px solid #ddd;
+}
+.orderdo{
+  text-align: right;
+}
+.orderdo text{
+  display: inline-block;
+  padding:20rpx 40rpx;
+}
+.paymoney{
+  color: red;
+}
+.guige{
+  margin-top:46rpx;
+}

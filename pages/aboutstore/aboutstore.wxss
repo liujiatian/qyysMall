@@ -1,0 +1,46 @@
+/* pages/aboutstore/aboutstore.wxss */
+.logos{
+  width:220rpx;
+  margin:200rpx auto 30rpx auto;
+  display:block;
+  border:1rpx solid #ddd;
+  box-shadow:0 0 30rpx rgba(0,0,0,0.1);
+  background-color:#fff;
+  text-align:center;
+  height:220rpx;
+  line-height:220rpx;
+  border-radius:20rpx;
+}
+.logos image{
+  width:180rpx;
+  height:60rpx;
+}
+.release{
+  text-align:center;
+  font-size:26rpx;
+  color:#666;
+}
+.edition {
+  text-align:center;
+  color:#6ca6f5;
+  position:absolute;
+  bottom:180rpx;
+  width:100%;
+  font-size:26rpx;
+}
+.Companies {
+  text-align:center;
+  color:#ddd;
+  font-size:26rpx;
+  position:absolute;
+  bottom:100rpx;
+  width:100%;
+}
+.copyright {
+  text-align:center;
+  font-size:26rpx;
+  color:#ddd;
+  position:absolute;
+  bottom:36rpx;
+  width:100%;
+}

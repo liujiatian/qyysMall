@@ -1,0 +1,66 @@
+<view class="container">
+ <!-- 导航栏切换部分 -->
+ <view class="navtop">
+    <block wx:for="{{navlist}}" wx:key='myorder'>
+      <view class="shipments {{navactivenum==item.navindex ? 'activenavtop':''}}" bindtap='acnavfun' data-index="{{item.navindex}}">
+          {{item.navtext}} 
+      </view>
+    </block>
+    <view class='goodsTabSliding' style='margin-left:{{(navactivenum)*20+"%"}};'></view>
+ </view>
+ <!-- 全部-->
+  <view class="alldingdan"> 
+    <block wx:for='{{allorder}}' wx:key='allordergoods' wx:for-index="allordergoods">
+    <scroll-view scroll-top="100" class="scolrlist">
+      <view bindtap='orderDetails' data-orderStatus='{{item.orderStatus}}' data-saleId='{{item.saleId}}' data-proid="{{item.productListVo[0].productId}}">
+        <view class="orderone">
+          <view class="ordernumber">订单编号：<text>{{item.orderCode}}</text></view>
+          <text wx:if="{{item.orderStatus==1}}" class="orderstatus">待付款</text>
+          <text wx:elif="{{item.orderStatus==5}}" class="orderstatus">待收货</text>
+          <text wx:elif="{{item.orderStatus==6&&item.appraiseTime==null}}" class="orderstatus">待评价</text>
+          <text wx:elif="{{item.orderStatus==6&&item.appraiseTime!=null}}" class="orderstatus">已评价</text>   
+          <text wx:elif="{{item.orderStatus==7}}" class="orderstatus">已关闭</text>
+          <text class="orderstatus" wx:else >待发货</text>
+        </view>
+        <!--  内容-->
+        <block wx:for='{{item.productListVo}}' wx:key='productListVo' wx:for-index="productListVo">
+          <view class="goodsmessg">
+              <view class="goodurl"><image  data-fatherindex='{{allordergoods}}' data-index='{{productListVo}}' binderror="errorFunction" src="https://ssl.lucentury.cn/mall/{{item.productPicture}}"></image></view>
+              <view class="goodsdescribe">{{item.productName}}
+                 <view class='guige'>规格：{{item.specName}}</view>
+              </view>
+              <view class="sprice_order">
+                <view class="goodsprice">￥{{item.productPrice==0?'赠品':item.productPrice}}</view>
+                <view>x{{item.productCount}}</view>
+              </view>
+          </view>
+        </block>
+         <view class="total">共{{item.productListVo.length}}件产品 合计：￥{{item.orderMoney-item.discountedMoney+item.postage}}（含运费￥{{item.postage}})</view>
+        <!--订单状态  -->
+         <!-- 待付款-->
+          <view class="orderdo" wx:if="{{item.orderStatus==1}}">
+            <text catchtap='closeMoney' data-salesid='{{item.saleId}}' data-ppid='{{item.ppid}}' data-ordercode='{{item.orderCode}}' data-pcount='{{item.pcount}}' data-index='{{index}}'>取消订单</text>
+            <text class="paymoney" catchtap='topaymoney' data-code='{{item.orderCode}}'data-price='{{item.orderMoney-item.discountedMoney+item.postage}}'>付款</text>
+          </view>
+           <!-- 待收货 -->
+           <view class="orderdo"  wx:elif="{{item.orderStatus==5}}" >
+            <text catchtap='chanwuliu' data-companyStr="{{item.logisticsCompany}}" data-courierCompanyCode="{{item.logisticsCode}}" data-courierNumber="{{item.logisticsNumber}}" data-orderStatus="{{item.orderStatus}}">查看物流</text>
+            <text class="paymoney" catchtap='receipt' data-saleId='{{item.saleId}}'>确认收货</text>
+          </view>
+          <!-- 待评价 -->
+          <view class="orderdo"  wx:elif="{{item.orderStatus==6}}" >
+          <text catchtap='chanwuliu' data-companyStr="{{item.logisticsCompany}}" data-courierCompanyCode="{{item.logisticsCode}}" data-courierNumber="{{item.logisticsNumber}}" data-orderStatus="{{item.orderStatus}}">查看物流</text>
+            <text wx:if="{{item.appraiseTime==null}}" class="paymoney" catchtap='topingjia' data-id="{{item.productListVo[0].productId}}" data-code="{{item.productListVo[0].productCode}}" data-saleId="{{item.saleId}}">评价</text>
+          </view>
+          <view wx:else> </view>
+        </view>
+         </scroll-view>
+    </block>
+  </view>
+  <block wx:if="{{shownodate==true}}">
+      <view class="nowuimg">
+      <image src="{{nocontentimg}}"></image>
+      <text>暂无订单信息</text>
+    </view>
+  </block> 
+</view>

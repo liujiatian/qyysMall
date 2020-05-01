@@ -1,0 +1,25 @@
+<!--pages/commissionWithdrawal/commissionWithdrawal.wxml-->
+<view class="content">
+  <view class="showlist">
+    <view>
+      <text class="tispan">可提金额：</text> <text>{{bringmoney}}</text>
+    </view>
+     <view>
+      <text class="tispan">提现账户：</text> <text>{{bringname}}</text>
+    </view>
+     <view>
+      <text class="tispan">提现：</text> <input text="number" cursor="5px" class="minmoney" placeholder='提现金额不能低于1元'></input>
+    </view>
+     <view>
+      <text class="tispan">提现渠道：</text>
+      <view class="zhifuimg">
+      <image src="{{paymoneylogo}}"></image>
+      <text>微信支付</text>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="depositmind">预计3至5个工作日到账</view>
+  <view class="depositaction">提现</view>
+  <view class="depositname">企易云商提供技术支持</view>
+</view>

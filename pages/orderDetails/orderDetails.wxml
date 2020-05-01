@@ -1,0 +1,86 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class="content">
+    <view class="goodsstatus">
+      <image src='{{statusimg}}'></image>
+      <view class="bgtitle">{{bgtitle}}</view>
+      <view class="bgtime" wx:if='{{orderStatus==1||orderStatus==5}}'>{{bgtime}}</view>
+       <view class="bgtime" wx:else>{{bg_text}}</view>
+    </view>
+    <!-- 物流 -->
+    <view  wx:if="{{orderStatus==5||orderStatus==6}}" class="lookwuliu" bindtap="tologistics"
+    data-logisticsCompany="{{datecotent.logisticsCompany}}"
+    data-logisticsCode="{{datecotent.logisticsCode}}"
+    data-logisticsNumber="{{datecotent.logisticsNumber}}"
+    data-orderStatus="{{datecotent.orderStatus}}"
+    >
+      <image src="{{wuliuimg}}"></image>
+      <view class='wuliu_text'>
+       <view class="wulius1">{{logisticsInfo_text}}</view>
+		    <view class="wulius2">{{logisticsInfo_ftime}}</view>
+      </view>
+     
+
+    </view>
+    <!-- 收货信息 -->
+    <view class="takegoods">
+          <view class="location_icon"> <image src='{{location_icon}}'></image></view>
+          <view class="consignee">
+            <view>
+             <view class="consigneename">收货人：{{datecotent.consignee}}</view>
+             <view class="consignee_phone">{{datecotent.consigneeMobile}}</view>
+            </view>
+             <view class="consignee_location">收货地址：{{datecotent.consigneeAddress}}</view>
+          </view>
+         
+    </view>
+    <!-- 商品信息 -->
+    <view class="goodsbg">
+    <block wx:for='{{datecotent.productList}}' wx:key='productList'>
+       <view class="goodsmessg">
+          <view class="goodurl"><image binderror="errorFunction" data-index="index" src="https://ssl.lucentury.cn/mall/{{item.minpicture}}"></image></view>
+          <view class="goodsdescribe">
+           {{item.name}}
+
+              <view wx:if='{{item.spec==null}}'>规格：无规格</view>
+              <view wx:else>规格： {{item.spec}}</view>
+          </view>
+          <view class="sprice_order">
+            <view class="goodsprice" wx:if="{{item.price==0}}">赠品</view>
+            <view class="goodsprice" wx:else>￥{{item.price}}</view>
+            <view>x{{item.count}}</view>
+          </view> 
+        </view>
+      </block>
+    </view>
+    <!-- 订单信息 -->
+    <view class="ordernumbered_list">
+      <view class="message_board">
+        <text>买家留言：</text>
+        <view>{{datecotent.buyerMessage}}</view>
+      </view>
+       <view class="freight" wx:for='{{discountsArr}}' wx:key='discountsArr'>
+       {{item.discountName}}
+       <text>{{item.discountPrice}}</text>
+       </view>
+      <view class="freight">运费：<text>￥{{datecotent.postage}}</text> </view>
+      <view class="reafreightlity">实付款（含运费）<text>￥{{waitMoney}}</text> </view>
+      <view class="ordercode">
+          <view>订单编号：{{datecotent.orderCode}}</view>
+          <view>下单时间：{{datecotent.orderTime}}</view>
+          <view wx:if="{{orderStatus == 2 || orderStatus == 3 || orderStatus == 4 || orderStatus == 8||orderStatus == 5||orderStatus == 6}}">付款时间：{{datecotent.payTime}}</view>
+          <view wx:if="{{orderStatus == 5||orderStatus == 6}}">发货时间：{{datecotent.shipTime}}</view>
+          <view wx:if="{{orderStatus == 6}}">完成时间：{{datecotent.okTime}}</view>
+      </view>
+    </view>
+</view>
+<view  wx:if="{{orderStatus==1}}" class="statusdo">
+  <text class="cancelorder" catchtap='closeMoney'>取消订单</text>
+  <text class="paymoney" catchtap='topaymoney' data-price='{{waitMoney}}' data-orderCode="{{datecotent.orderCode}}">付款</text>
+</view>
+<view  wx:if="{{orderStatus==5}}" class="statusdo">
+ <text catchtap='chanwuliu' data-companyStr="{{datecotent.logisticsCompany}}" data-courierCompanyCode="{{datecotent.logisticsCode}}" data-courierNumber="{{datecotent.logisticsNumber}}" data-orderStatus="{{datecotent.orderStatus}}">查看物流</text>
+  <text class="paymoney" catchtap='receipt' data-saleId='{{saleId}}'>确认收货</text>
+</view>
+<view  wx:if="{{orderStatus==6&&datecotent.appraiseTime==null}}" class="statusdo">
+  <text class="paymoney" catchtap='topingjia' data-code="{{datecotent.productList[0].product.code}}" data-id="{{proid}}" data-saleId="{{saleId}}">评价</text>
+</view>

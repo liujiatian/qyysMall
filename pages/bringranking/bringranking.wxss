@@ -1,0 +1,7 @@
+/* pages/bringranking/bringranking.wxss */
+.granking{
+  text-align: center;
+  margin-top:40rpx;
+  font-size: 26rpx;
+  color:#666;
+}

@@ -1,0 +1,12 @@
+<!--pages/classify/classify.wxml-->
+<view class='classify {{classifyClass}}'>
+  <view class='classify_1 classifyAttr'>
+    <view wx:for='{{classifyAttr_1}}' data-id='{{item[0]}}' data-text='{{item[1]}}' bindtap='classifyTab_1' style='{{dataIndex1==index?"background-color:#f5f5f5":""}}' data-index='{{index}}' wx:key='{{index}}'>{{item[1]}}</view>
+  </view>
+  <view class='classify_2 classifyAttr'>
+    <view wx:for='{{classifyAttr_2}}' data-id='{{item[0]}}' data-text='{{item[1]}}' bindtap='classifyTab_2' style='{{dataIndex2==index?"background-color:#f5f5f5":""}}' data-index='{{index}}' wx:key='{{index}}'>{{item[1]}}</view>
+  </view>
+  <view class='classify_3 classifyAttr'>
+    <view wx:for='{{classifyAttr_3}}' data-id='{{item[0]}}' data-text='{{item[1]}}' bindtap='classifyTab_3' wx:key='{{index}}'>{{item[1]}}</view>
+  </view>
+</view>

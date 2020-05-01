@@ -1,0 +1,15 @@
+<!--pages/settleOrder/settleOrder.wxml-->
+<view class="container">
+ <!-- 导航栏切换部分 -->
+ <view class="navtop">
+    <block wx:for="{{navlist}}" wx:key='myorder'>
+      <view class="shipments {{navactivenum==item.navindex ? 'activenavtop':''}}" bindtap='acnavfun' data-index="{{item.navindex}}">
+          {{item.navtext}}
+      </view>
+    </block>
+    <view class='goodsTabSliding' style='margin-left:{{(navactivenum)*(100/3)+"%"}};'></view>
+ </view>
+ <view class="reminder">
+   共找到 <text> {{ordernum}}</text> 订单, <text decode="{{true}}">&nbsp;</text>  订单总额 <text>{{orderallmoney}}</text>
+ </view>
+</view>

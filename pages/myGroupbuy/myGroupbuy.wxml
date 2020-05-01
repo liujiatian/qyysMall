@@ -1,0 +1,67 @@
+<!--pages/myGroupbuy/myGroupbuy.wxml-->
+<view class='content'>
+  <scroll-view>
+    <view wx:for="{{loadata}}" wx:key="loadata" class='content_data'> 
+      <view class="goodslist">
+        <view class="goodsimg"> <image binderror="errorFunction" data-index="index"   src="https://ssl.lucentury.cn/mall/{{item.activityProduct.activityProductImage}}"></image></view>
+        <view class="goodsdetile">
+          <view class="productName">{{item.activityProduct.activityProductName}}</view>
+          <view class="productvalue"><text style='width:{{item.proportion}}'></text></view>
+          <view class="productdscripe" wx:if="{{numcont}}>0">还差{{item.numcont}}人满团</view>
+          <view class="productdscripe" wx:else>已满团</view>
+        </view>
+        <view class='goodsprice'><text>团购价</text><text class='buyprice'>￥{{item.activityProduct.activityProductPrice}}</text></view>
+      </view>
+      <!-- 分享，付款 -->
+      <!-- pc删除 -->
+      <view  wx:if='{{item.activity.isDelete == 1}}'>
+      <!-- // 时间的有限期 大于0代表未过期 -->
+        <view class='shareto' wx:if='{{item.numtime>0}}'>
+          <view>
+            <text  wx:if='{{item.activity.groupCount==item.count}}'>已满团</text>
+            <button wx:else data-info='{{order}}' open-type="share" hover-class='none'>分享</button> 
+          </view>
+          <view wx:if='{{item.isInitiator==2}}'>
+            <text  wx:if='{{item.activity.groupCount==item.count&&item.isPay==2}}'>已付款</text>
+            <text  wx:elif='{{item.activity.groupCount==item.count&&item.isPay!=2}}'
+            data-mid='{{item.client}}'  data-spacename='{{item.specificationsName}}' 
+            data-purchareCount='{{item.purchareCount}}'
+            data-spaceid='{{item.specificationsId}}'  data-pid='{{item.productId}}' 
+            data-productPrice='0'
+            data-groupBookingId='{{item.groupBookingId }}'
+            data-relationId='{{item.relationId}}'
+            catchtap='payorder'
+            >去下单</text>
+            <text  wx:elif='{{item.activity.groupCount!=item.count&&item.isPay==1}}'
+            data-mid='{{item.client}}'  data-spacename='{{item.specificationsName}}' 
+            data-purchareCount='{{item.purchareCount}}'
+            data-spaceid='{{item.specificationsId}}'  data-pid='{{item.productId}}' 
+            data-productPrice='0'
+            data-groupBookingId='{{item.groupBookingId }}'
+            data-relationId='{{item.relationId}}'
+            catchtap='payorder'
+            >付款</text>
+            <text  wx:elif='{{item.activity.groupCount!=item.count&&item.isPay!=1}}'>已付款</text>
+          </view>
+          <view wx:else>
+            <text  wx:if='{{item.isPay==1}}'
+            data-mid='{{item.client}}'  data-spacename='{{item.specificationsName}}' 
+            data-purchareCount='{{item.purchareCount}}'
+            data-spaceid='{{item.specificationsId}}'  data-pid='{{item.productId}}'
+            data-productPrice='{{item.activityProduct.activityProductPrice}}'
+            data-groupBookingId='{{item.groupBookingId }}'
+            data-relationId='{{item.relationId}}'
+            catchtap='payorder'
+            >付款</text>
+            <text  wx:else>已付款</text>
+          </view>
+        </view>
+       <view class='shareto'  wx:else>已过期</view>
+      </view>
+      <view  wx:else>
+        <view class='shareto'>已无效</view>
+      </view>     
+    
+    </view>
+  </scroll-view>
+</view>

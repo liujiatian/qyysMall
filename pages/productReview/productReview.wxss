@@ -1,0 +1,63 @@
+/* pages/productReview/productReview.wxss */
+.review{
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.review view{
+  float: left;
+  width: 25%;
+  height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 90rpx;
+  box-sizing: border-box;
+}
+.reviewIndex{
+  position: absolute;
+  top: 90rpx;
+  height: 4rpx;
+  background-color: #fa4f52;
+  left: 0;
+  width: 25%;
+}
+.comment{
+  margin: 25rpx 15rpx 15rpx 15rpx;
+  border-bottom:1rpx solid #e5e5e5;
+  padding-bottom:20rpx;
+}
+.portrait{
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.portrait image,.portrait text{
+  float: left;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.Stars image{
+  height: auto;
+  width: 150rpx;
+}
+.portrait image{
+  width: 80rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.content{
+  font-size:28rpx;
+  color:#666;
+}
+.ImageCollection image{
+  height:160rpx;
+  width:160rpx;
+  margin:10rpx 10rpx 0 0;
+}
+.NoComments{
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+  padding: 50rpx 0;
+}

@@ -1,0 +1,20 @@
+<!--pages/bringrcorde/bringrcorde.wxml-->
+<view class="content">
+  <view class="commission">
+      <view class="commissionnum">￥<text>{{commissionnum}}</text></view>
+      <view class="commissiontitle">累计佣金（元）</view>
+  </view>
+  <!--  -->
+  <view>
+    <text class="nowmonth">本月</text>
+    <view class="nodata">暂无数据</view>
+  </view>
+   <view>
+    <text class="nowmonth">上月</text>
+    <view class="nodata">暂无数据</view>
+  </view>
+   <view>
+    <text class="nowmonth">历史</text>
+    <view class="nodata">暂无数据</view>
+  </view>
+</view>

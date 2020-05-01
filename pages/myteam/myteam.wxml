@@ -1,0 +1,4 @@
+<!--pages/myteam/myteam.wxml-->
+<view class="mystate">
+   无一级下属
+</view>

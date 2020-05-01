@@ -1,0 +1,130 @@
+/* pages/addNewAddress/addNewAddress.wxss */
+.content{
+  font-size:30rpx;
+  color:#666;
+}
+.add_data{
+  width:94%;
+  margin:0rpx auto;
+  border-bottom:1rpx solid #ddd;
+  overflow:hidden;
+  padding:18rpx 0;
+}
+.add_data>text{
+  float:left;
+  display:block;
+  height:1.4rem;
+  line-height:1.4rem;
+}
+.add_data input{
+  padding-left:20rpx;
+  border:1px solid #ddd;
+  float:right;
+  text-align:right;
+  border:none;
+  color: #999;
+}
+.save_phone{
+  background-color:#FF5C52;
+  height:70rpx;
+  line-height:70rpx;
+  width:80%;
+  margin:0 auto;
+  color:#fff;
+  text-align:center;
+  border-radius:10rpx;
+  margin-top:40rpx;
+}
+.address_text{
+  width:80%;
+  float:right;
+  min-height:1.4rem;
+  text-align: right;
+   color: #999;
+}
+.phcolor{
+  color: #999;
+}
+
+page{
+  background-color: rgba(255, 255, 255, 1); 
+}
+picker-view{
+  background-color: white;
+  padding: 0;
+  width: 100%; 
+  height: 380rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+picker-view-column view{
+  vertical-align:middle; 
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------- */
+
+.animation-element-wrapper {
+  display: flex;  
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 470rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-button {
+  top:20rpx;
+  width: 290rpx;
+  height: 100rpx;  
+  align-items:center;
+}
+.left-bt{
+  font-size:38rpx;
+  margin-right:20rpx;
+  padding-top:15rpx;
+  position:absolute;
+  top:0;
+  left:30rpx;
+}
+.right-bt {
+  right: 30rpx;
+  font-size:38rpx;
+  padding-top:15rpx;
+  position:absolute;
+  top:0;
+  left:130rpx;
+
+}
+
+.line{
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx; 
+  background-color: #eeeeee;
+}
+.mark_text{
+  width:94%;
+  margin:0 auto;
+  border:1rpx solid #ddd;
+  margin-top:20rpx;
+  padding:10rpx;
+  box-sizing:border-box;
+}

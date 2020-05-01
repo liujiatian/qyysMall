@@ -1,0 +1,15 @@
+<!--pages/security/security.wxml-->
+<view class="conetnt">
+  <view class="veyphone">
+    <text>请设置下列项目保护账号</text>
+    <view bindtap='verifyPhone'>
+    <text>手机验证</text>
+    <text class='cellPhone'>{{cellPhone}}</text>
+    
+    </view>
+  </view>
+  <view class="aboutstore" bindtap='aboutstore'>
+    <text>关于商城</text>
+    <image src="{{todelimg}}"></image>
+  </view>
+</view>

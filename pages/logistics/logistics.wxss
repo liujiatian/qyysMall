@@ -1,0 +1,102 @@
+/* pages/logistics/logistics.wxss */
+.page_row{
+  overflow: hidden;
+}
+.goods{
+  margin:30rpx;
+  height:130rpx;
+  width:130rpx;
+  border-radius:15rpx;
+  border:1rpx solid #ddd;
+  float:left;
+  padding:20rpx;
+}
+.logistics{
+  margin-top:43rpx;
+  font-size:28rpx;
+  float: left;
+}
+.logistics text{
+  display: block;
+  margin-bottom:10rpx;
+}
+.br{
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 30rpx;
+  background: #d0d0d0;
+  height: 1rpx;
+}
+ 
+/* 下部分 */
+.logistics_centent{
+  position:absolute;
+  left:90rpx;
+  font-size:28rpx;
+  color:#666;
+  top:16rpx;
+}
+.icon{
+  width: 20rpx;
+  height: 20rpx;
+  background: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  margin:0rpx 20rpx 0rpx 40rpx;
+}
+.in{
+  border: 1rpx solid #ffac36;
+  animation: my_animation 2s linear infinite;
+  background-color: #FFAC36; 
+}
+@keyframes my_animation{
+  0%{
+     opacity: 0.4;
+     transform: scale(1);
+  }
+  50%{
+     transform: scale(1.5); 
+     opacity: 1;
+  }
+  100% {  
+    transform: scale(1);
+    opacity: 0.4;
+  }  
+}
+ @-webkit-keyframes my_animation{
+  0%{
+     opacity: 0.4;
+     transform: scale(1);
+  }
+  50%{
+     transform: scale(1.5); 
+     opacity: 1;
+  }
+  100% {  
+    transform: scale(1);
+    opacity: 0.4;
+  } 
+}
+.no_in{
+  border: 1rpx solid #d0d0d0;
+}
+.on{
+  background: #ddd;
+  height: 90rpx;
+  width: 1px;
+  margin-left:50rpx;
+}
+.timewuliu{
+  font-size:24rpx;
+  color:#666;
+  text-align:left;
+  line-height:38rpx;
+  margin:20rpx 0;
+}
+.order{
+  position: relative;
+  margin:20rpx 0;
+}
+.redcolor{
+  color: #FFAC36; 
+}

@@ -1,0 +1,142 @@
+/* pages/bigGun/bigGun.wxss */
+/* mine.wxss */
+.container{
+	background-color:#fff;
+  font-size: 26rpx;
+  color:#666;
+}
+.bg-box{
+	width: 100%;
+	height: 342rpx;
+	position: relative;
+}
+.bgpic{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.personalmsg{
+	position: relative;
+	z-index: 5;
+  height: 320rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.headView {
+  overflow:hidden;
+  display: block;
+  width:130rpx;
+  height:130rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.sharecard{
+background:url('https://ssl.lucentury.cn/mall/images/fenxiang.png') no-repeat;
+background-size:100% 100%;
+display:block;
+line-height:60rpx;
+height:60rpx;
+width:232rpx;
+border:none;
+color:#fff;
+margin-top:30rpx;
+ border-radius: 50rpx;
+ border: none;
+}
+.sharecard::after {
+    border-radius: 50rpx;
+    border: none;
+}
+.withdrawtitle{
+  font-size: 26rpx;
+  color:#666;
+  overflow:hidden;
+}
+.withdrawtitle text{
+  display: block;
+  text-align:center;
+  padding-top:20rpx;
+}
+.commission{
+  float: left;
+  width:50%;
+  height: 100%;
+}
+.nousercommission{
+  float: right;
+  width:50%;
+  height: 100%;
+}
+.commissionmoney{
+  color: red;
+}
+.rankinglist{
+  border:1rpx solid #ddd;
+  overflow:hidden;
+  width:100%;
+  border-left:0;
+  border-right:0;
+  margin-top:20rpx;
+}
+.rankinglist view{
+  float:left;
+  width:calc(33%);
+  text-align:center;
+  padding:30rpx 0;
+  border-right:1rpx solid #ddd;
+}
+.rankinglist view:last-child{
+  border: 0
+}
+.teamorder{
+  padding-top:20rpx;
+}
+.myorder{
+  width: 100%;
+  overflow: hidden;
+}
+.myorder>view{
+  float: left;
+}
+.temimgurl{
+  width:20%;
+  text-align: center;
+}
+.temimgurl image{
+  width:70rpx;
+  height:70rpx;
+  margin-top:40rpx;
+}
+.allconment{
+  width: 80%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #ddd;
+  padding:30rpx 0;
+}
+.namcontent{
+  width:40%;
+  float: left;
+}
+.namcontent view{
+  margin-bottom:20rpx;
+  font-size:34rpx;
+  color:#333;
+}
+.namcontent text{
+
+}
+.rightcontent{
+  float: left;
+  width:60%;
+  padding-top:65rpx;
+}
+.graderank{
+  margin-left: 20rpx;
+}

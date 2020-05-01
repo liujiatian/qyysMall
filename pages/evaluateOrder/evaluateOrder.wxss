@@ -1,0 +1,89 @@
+/* pages/evaluateOrder/evaluateOrder.wxss */
+.content{
+  font-size: 26rpx;
+  color: #666;
+}
+.pingjiatext{
+  border:1rpx solid #ddd;
+  width:94%;
+  margin:10rpx auto;
+  padding:10rpx;
+  height:230rpx;
+}
+.uplimglist{
+  width:97%;
+  margin:0 auto;
+  overflow: hidden;
+  padding-top:10rpx;
+}
+.uplimglist view{
+  width: 25%;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+.uploadimg{
+  margin-top:15rpx;
+}
+.uploadimg>image{
+width:130rpx;
+height:130rpx;
+border:1rpx solid #ddd;
+padding:10rpx;
+}
+.uploadimg>text{
+  position:absolute;
+  top:-16rpx;
+  right:0rpx;
+  width:36rpx;
+  height:36rpx;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  z-index:99999;
+  border-radius:50%;
+}
+.pingjia{
+  border-top:1rpx solid #ddd;
+  padding:20rpx;
+  margin-top:30rpx;
+}
+.pjtitle{
+  font-size:33rpx;
+}
+.seleimg{
+  margin-top:20rpx;
+  overflow: hidden;
+}
+.seleimg>text{
+  float:left;
+  display:block;
+  line-height:60rpx;
+}
+.tuxing{
+width:300rpx;
+height:60rpx;
+background-size:100% 100%;
+float:left;
+margin-left:40rpx;
+overflow:hidden;
+}
+.tuxing>view{
+  float:left;
+  width:20%;
+  height:60rpx;
+}
+.save_pingjia{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: block;
+  margin: 0 auto;
+  background: red;
+  color:#fff;
+  font-size:34rpx;
+  margin-top:50rpx;
+}
+.save_pingjia:affter{
+		border: none;
+}

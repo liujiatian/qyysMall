@@ -1,0 +1,43 @@
+<!--pages/evaluateOrder/evaluateOrder.wxml-->
+<view class="content">
+  <textarea class="pingjiatext" placeholder='快来发表您的评价吧' bindinput="userBox"></textarea>
+  <view class="uplimglist">
+    <block wx:for='{{uplimglist}}' wx:key='index'>
+      <view class="uploadimg" bindtap='previewimage' data-iamgeurl='{{item}}'>
+        <image src='{{item}}'></image> 
+        <text catchtap='deleimgup' data-index="{{index}}" style="background-image:url({{deleteimg}});"></text>
+      </view>
+    </block>
+    <view class="uploadimg" bindtap='uploadimages'><image src='{{uploadimg}}'></image></view>
+  </view>
+  <!-- 我的评分 -->
+  <view class="pingjia">
+    <view class="pjtitle">我的评分</view>
+    <view class="seleimg">
+      <text>描述相符</text>
+      <view class="tuxing" style="background-image:url({{describeimg}});" >
+        <block wx:for="clickxingarr" wx:key='miaoshu'>
+          <view bindtap='ckdescribe' data-index="{{index}}"></view>
+        </block>
+      </view>
+    </view>
+    <view class="seleimg">
+      <text>物流服务</text>
+       <view class="tuxing" style="background-image:url({{logistics}});">
+        <block wx:for="clickxingarr" wx:key='wuliu'>
+          <view bindtap='cklogistics' data-index="{{index}}"></view>
+        </block>
+      </view>
+    </view>
+    <view class="seleimg">
+      <text>态度服务</text>
+      <view class="tuxing" style="background-image:url({{manner}});" >
+        <block wx:for="clickxingarr" wx:key='taidu'>
+          <view bindtap='ckmanner' data-index="{{index}}"></view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+  <button class="save_pingjia" bindtap='evaluateOrder'>提交评价</button>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/index-integral/index-integral.wxml-->
+
+<view class="content">
+  <view class="usenum">
+    <text>可用积分</text>
+    <text class="jifenn">{{currentPoints}}</text>
+  </view>
+  <view class="recordlist" wx:if="{{numval==0}}">
+    <view class="recordtitle">收入</view>
+    <block wx:for="{{recordlist}}" wx:key='recordlist'>
+      <view class="recordcontent">
+        <view>
+            <text wx:if="{{item.integralType==1}}">消费积分</text>
+            <text wx:elif="{{item.integralType==2}}">开卡积分</text>
+            <text wx:elif="{{item.integralType==3}}">完善信息积分</text>
+            <text wx:elif="{{item.integralType==4}}">推荐积分</text>
+            <text class="recodenum">{{item.integral}}</text>
+        </view>
+        <view class="recordfirst">{{item.createTime}}</view>
+      </view>
+      </block>
+  </view>
+   <view class="nocontentimg" wx:elif="{{numval==1}}">
+   <image src='{{nocontentimg}}'></image>
+   <text>暂无数据</text>
+   </view>
+</view>

@@ -1,0 +1,101 @@
+/* pages/myGroupbuy/myGroupbuy.wxss */
+.content{
+  background: #fafafa;
+  padding-top:20rpx;
+  font-size:26rpx;
+  color:#666;
+}
+.content_data{
+  background: #fff;
+  margin-bottom:20rpx;
+  padding:10rpx 30rpx;
+}
+.goodslist{
+  width:100%;
+  overflow:hidden;
+  padding: 20rpx 0;
+}
+.goodslist>view{
+  float:left;
+}
+.goodsimg{
+  width: 20%;
+  text-align: center;
+}
+.goodsimg>image{
+  width:140rpx;
+  height:140rpx;
+}
+.goodsdetile{
+    width: 50%;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+.productName{
+    font-size: 25rpx;
+    margin-bottom: 15rpx;
+    margin-top: 20rpx;
+}
+.productvalue{
+    background: #d1daa2;
+    width: 260rpx;
+    height: 15rpx;
+    border-radius: 10rpx;
+    position: relative;
+}
+.productvalue text{
+    display: inline-block;
+    background: #7F950C;
+    width: 150rpx;
+    height: 15rpx;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.productdscripe{
+    margin-top: 10rpx;
+    color: #7F950C;
+}
+.buyprice{
+  color: #e6616b;
+  padding-left:8rpx;
+}
+.goodsprice{
+    width: 30%;
+    padding-top: 20rpx;
+}
+.shareto{
+  border-top: 1rpx solid #ddd;
+  padding: 15rpx 0;
+  background:#fff;
+  overflow:hidden;
+  text-align: center;
+}
+.shareto>view{
+  width:50%;
+  float:left;
+  box-sizing:border-box;
+  text-align: center;
+  color: #7F950C;
+}
+.shareto view:first-child {
+  border-right: 1rpx solid #ddd;
+}
+.shareto text{
+  display:block;
+}
+.shareto button{
+  display:block;
+  outline:none;
+  padding:0;
+  margin:0;
+  font-size:26rpx;
+  color:#7F950C;
+  background:#fff;
+  line-height:40rpx;
+}
+.shareto button::after{
+	border:none;
+  border-radius:0;	
+}

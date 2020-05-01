@@ -1,0 +1,182 @@
+/* pages/orderDetails/orderDetails.wxss */
+.content{
+  font-size: 26rpx;
+  color: #666;
+  padding-bottom:76rpx;
+}
+.goodsstatus{
+  font-size: 30rpx;
+  color: #fff;
+  position: relative;
+}
+.goodsstatus>image{
+  width: 100%;
+  height:215rpx;
+}
+.bgtitle{
+  position: absolute;
+  top: 60rpx;
+  left: 40rpx;
+}
+.bgtime{
+  position: absolute;
+  top: 120rpx;
+  left: 40rpx;
+}
+.goodsbg{
+  background-color: #F8F8F8;
+}
+.goodsmessg{
+  overflow: hidden;
+  padding: 30rpx 30rpx;
+}
+.goodsmessg>view{
+    float: left;
+}
+.goodurl{
+  width: 20%;
+}
+.goodurl>image{
+width:120rpx;
+height:120rpx;
+}
+.goodsdescribe{
+ width:62%;
+box-sizing:border-box;
+line-height:40rpx;
+}
+.goodsdescribe>view{
+  padding-top:30rpx;
+}
+.sprice_order{
+  width: 18%;
+}
+.sprice_order>view{
+  text-align: right;
+}
+.goodsprice{
+  margin-bottom:70rpx;
+}
+.takegoods{
+  overflow:hidden;
+  padding:25rpx 40rpx;
+  box-sizing:border-box;
+  font-size:22rpx;
+}
+.takegoods>view{
+  float: left;
+}
+.location_icon{
+  width: 10%;
+  margin-top:30rpx;
+}
+.location_icon image{
+  width:36rpx;
+  height:48rpx;
+}
+.consignee{
+  width: 90%;
+}
+.consignee>view{
+  width:100%;
+}
+.consigneename{
+  padding-bottom:25rpx;
+  display:inline-block;
+}
+.takegoods .consignee_phone{
+  float: right;
+  display:inline-block;
+}
+.consignee_location{
+  line-height: 30rpx;
+  line-height:40rpx;
+}
+.ordernumbered_list{
+
+}
+.message_board{
+  padding:20rpx 30rpx;
+  border-bottom:1rpx solid #ddd;
+  overflow:hidden;
+}
+.message_board>text{
+  float:left;
+  width: 20%;
+}
+.message_board>view{
+ float:left;
+  width: 80%;
+}
+.freight{
+  padding: 10rpx 30rpx;
+}
+.freight text{
+  float: right;
+}
+.reafreightlity{
+  padding: 10rpx 30rpx;
+}
+.reafreightlity text{
+  float: right;
+  color: red;
+}
+.ordercode{
+  padding: 20rpx 30rpx;
+  border-top:1rpx solid #ddd;
+}
+.ordercode>view{
+  padding: 6rpx 0;
+}
+.statusdo{
+  position:fixed;
+  bottom:0;
+  left:0;
+  text-align:right;
+  color:#666;
+  font-size:26rpx;
+  border-top:1rpx solid #ddd;
+  width:100%;
+  padding:20rpx;
+  box-sizing:border-box;
+  background-color:#fff;
+}
+.statusdo text{
+  padding:7rpx 30rpx;
+  border-radius:8rpx;
+  margin-left:30rpx;
+}
+.cancelorder{
+  border: 1px solid #ddd;
+}
+.paymoney{
+  color: #fff;
+  background-color: #fa4f52;
+  border: 1px solid #fa4f52;
+} 
+.lookwuliu{
+  padding:30rpx 40rpx;
+  border-bottom:1rpx solid #ddd;
+  overflow:hidden;
+}
+.lookwuliu image{
+  float:left;
+  width:7%;
+  height:45rpx;
+}
+.wuliu_text{
+  float:left;
+  width:90%;
+  padding-left:20rpx;
+  box-sizing:boder-box;
+}
+.wuliu_text>view{
+  font-size: 22rpx;
+}
+.wulius1{
+  line-height:40rpx;
+}
+.wulius2{
+  margin-top:10rpx;
+
+}

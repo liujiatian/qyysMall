@@ -1,0 +1,24 @@
+<!--pages/index/index.wxml 首页-->
+
+<!-- 轮播图 -->
+<swiper class="slide-swiper" indicator-dots='{{indicatorDots}}' indicator-color='{{indicatorColor}}' indicator-active-color='{{indicatorActiveColor}}' autoplay='{{autoplay}}'>
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item class="slide-image">
+       <navigator url='{{item[0]}}'><image src="{{item[1]}}"/></navigator>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 快捷导航 -->
+<view class='navAttr'>
+  <view wx:for='{{navAttr}}' wx:key="*this">
+    <navigator url='{{item[0]}}'><image mode="aspectFit" src='{{item[1]}}'></image></navigator>
+  </view>
+</view>
+
+<!-- 产品列表 -->
+<view class='productList'>
+  <view wx:for='{{productList}}' wx:key="*this">
+    <navigator url='{{item[0]}}'><image mode="widthFix" src='{{item[1]}}'></image></navigator>
+  </view>
+</view>

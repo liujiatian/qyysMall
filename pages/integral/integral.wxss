@@ -1,0 +1,63 @@
+/* pages/index-integral/index-integral.wxss */
+page {
+  width:100%;
+  height:100%;
+  background-color: #fafafa;
+}
+.content{
+  width:100%;
+  height:100%;
+}
+.content:before{
+     content: "";  
+     display: table; 
+}
+.usenum{
+  width:100%;
+  background:#fff;
+  margin:20rpx 0;
+  text-align:center;
+  font-size:28rpx;
+  color:red;
+  padding:60rpx 0;
+}
+.jifenn{
+  display:block;
+  margin-top:30rpx;
+}
+.recordlist{
+  background-color:#fff;
+}
+.recordtitle{
+  font-size:32rpx;
+  color:#333;
+  text-align:center;
+  padding:30rpx 0;
+  border-bottom:1rpx solid #ddd;
+}
+.recordcontent{
+  font-size: 26rpx;
+  padding:30rpx;
+}
+.recordfirst{
+ margin-top:20rpx;
+ color:#666;
+}
+.recodenum{
+  float: right;
+  color:red;
+}
+.nocontentimg{
+  text-align: center;
+}
+.nocontentimg image{
+  margin-top:20px;
+  width:200rpx;
+  height:200rpx;
+}
+.nocontentimg text{
+  font-size:28rpx;
+  color:#666;
+  display:block;
+  margin-top:20rpx;
+}

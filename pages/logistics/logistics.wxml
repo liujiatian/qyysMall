@@ -1,0 +1,23 @@
+<!--pages/logistics/logistics.wxml-->
+<view class='page_row top'>
+  <image class='goods' src='{{notimeimg}}'></image>
+  <view class='page_clu logistics'>
+    <text>物流状态: {{stateStr}}</text>
+    <text>物流公司: {{companystr}}</text>
+    <text>物流单号: {{couriernumber}}</text>
+  </view>
+</view>
+<view class='br'></view>
+<block wx:for="{{wuliu}}" wx:key="index">
+  <view class='order'>
+    <view class='icon {{0==index?"in":"no_in"}}'></view>
+    <view class='logistics_centent page_clu'>
+      <text class='{{0==index?"redcolor":""}}'>{{item.context}}</text>
+      <view class='timewuliu {{0==index?"redcolor":""}}'><text>{{item.time}}</text></view>   
+    </view>
+    <view class='on'></view>
+    
+  </view>
+</block>
+<view class='icon no_in'></view>
+

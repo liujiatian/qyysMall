@@ -1,0 +1,19 @@
+<!--pages/promotiondetetails/promotiondetetails.wxml-->
+<view>
+  <scroll-view wx:if='{{nodatanum==1}}' class='datacont' scroll-y="true" bindscrolltolower="loadmoredata" scroll-with-animation='true'>
+    <navigator url='{{item.url}}' class='com' wx:for='{{attr}}' wx:key='*this'>
+      <view class='Excursion'><text>{{item.nav}}</text></view>
+      <view class='ActivityDetails'>
+        <image data-index='{{index}}' binderror="errorFunction" src='{{item.image}}'/>
+        <view class='designation'>
+          <view class='tradeName'><text>{{item.name}}</text></view>
+          <view class='market'><text>销量：{{item.market}}</text></view>
+          <view class='Price'><text style='color:#fa4f52;margin-right:15rpx;'>￥{{item.Price}}</text><text style='color:#999;text-decoration: line-through;'>￥{{item.PriceOf}}</text></view>
+        </view>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+ <view wx:if='{{nodatanum==0}}' class='bgdata_img'>
+  <image src='{{nodataimg}}'></image>
+</view>

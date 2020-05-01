@@ -1,0 +1,43 @@
+<!--pages/myAddress/myAddress.wxml-->
+<view class='content'>
+  <view class='ed_btn' wx:if="{{orderSureId==1}}">
+    <text wx:if="{{status==0}}" bindtap='administration'>管理</text>
+    <text wx:elif="{{status==1}}" bindtap='administration'>完成</text>
+  </view>
+  <!-- 收货地址 -->
+  <view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <block wx:for='{{dataArr}}' wx:key='dataArr'>
+        <view class='address_list' bindtap='sureOrderAddress' data-id='{{item.id}}'
+        data-contactName='{{item.contactName}}'  data-contactPhone='{{item.contactPhone}}'
+        data-province='{{item.province}}'   data-provinceCode='{{item.provinceCode}}' 
+        data-city='{{item.city}}'   data-cityCode='{{item.cityCode}}'
+        data-district='{{item.district}}'   data-districtCode='{{item.districtCode}}'
+        data-name='{{item.name}}' >
+          <view>{{item.contactName}}</view>
+          <view>{{item.contactPhone}}</view>
+          <view>
+            <text class="default" wx:if='{{item.isDefault==false}}'>[默认]</text>
+            {{item.province}} {{item.city}} {{item.district}} {{item.name}}
+          </view>
+          <!-- 设置默认收货地址 -->
+          <view wx:if="{{status==1}}" class='defaultRadio'>
+            <label class="defaultRadio_label" catchtap='seleradio' data-index='{{index}}'>
+              <radio wx:if='{{item.isDefault==false}}' value="{{item.id}}"  checked="true"/>
+               <radio wx:else value="{{item.id}}"/>
+              设置为默认            
+            </label>
+            <view class='edelet_btn'>
+              <text data-id="{{item.id}}" catchtap='editAddress'>编辑</text>
+              <text data-id="{{item.id}}" catchtap='deleteAddress'>删除</text>
+            </view>
+          </view>       
+        </view>
+        </block>
+    </radio-group>
+  </view>
+<!-- 新增地址 -->
+  <view wx:if="{{orderSureId==1}}" class='address_btn' bindtap='addNewaddress'>
+    +新增地址
+  </view>
+</view>

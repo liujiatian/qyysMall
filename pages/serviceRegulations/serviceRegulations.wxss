@@ -1,0 +1,17 @@
+/* pages/serviceRegulations/serviceRegulations.wxss */
+.content{
+  padding:20rpx 30rpx;
+}
+.gltitle{
+  font-size:32rpx;
+  padding-top:16rpx;
+}
+.gllist{
+  color:#666;
+  font-size:30rpx;
+  padding:14rpx 0;
+  line-height:48rpx;
+}
+.gllist>text{
+  color:#333;
+}

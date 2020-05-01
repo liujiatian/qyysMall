@@ -1,0 +1,343 @@
+/* pages/GroupPurchase/GroupPurchase.wxss */
+.slideshow{
+  height: 750rpx;
+  width: 750rpx;
+}
+.slideshow-image{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.productName{
+  padding:20rpx 20rpx 10rpx 20rpx;
+  font-size:32rpx;
+  color:#333;
+  min-height:30rpx;
+}
+.productPrice{
+  padding: 0 20rpx;
+}
+.currentPrice{
+  color: #fa4f52;
+  font-size: 32rpx;
+}
+.originalPrice{
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+  text-decoration: line-through;
+}
+.inventorySales{
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #999;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.halvingLine{
+  height: 16rpx;
+  background-color: #f5f5f5;
+}
+.singleLink{
+  height: 100rpx;
+  position: relative;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 20rpx;
+  overflow: hidden;
+}
+.fr{
+  float: right;
+}
+.rightArrow{
+  height: 100rpx;
+  width: 40rpx;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.rightArrow image{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 0;
+}
+.quantity{
+  border: 1rpx solid #e5e5e5;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin: 19rpx 0;
+}
+.quantity view{
+  display: inline-block;
+  height: 60rpx;
+  min-width: 70rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.quantityNull{
+  border-left: 1rpx solid #e5e5e5;
+  border-right:1rpx solid #e5e5e5;
+}
+.quantityTap{
+  font-size: 36rpx;
+}
+.tabbar{
+  position: absolute;
+  bottom: 0;
+  height: 120rpx;
+  background-color: #f8f8f8;
+  
+  left: 0;
+  right: 0;
+}
+.viewport{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 120rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  box-sizing: border-box;
+}
+.operation{
+  margin-left: 15%;
+  height: 100%;
+  line-height: 120rpx;
+  overflow: hidden;
+}
+.interlinkage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  line-height: 120rpx;
+  overflow: hidden;
+}
+.operation view{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  width: 94%;
+  float: left;
+  margin: 15rpx 3%;
+  color: #fff;
+  position: relative;
+  font-size: 28rpx;
+}
+.operation view image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+.operation view text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx; 
+}
+.interlinkage view{
+  float: left;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 15rpx 0;
+  position: relative;
+}
+.interlinkage view image{
+  height: 40rpx;
+  width: 40rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.interlinkage view text{
+  font-size: 28rpx;
+  height: auto;
+  line-height: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #666;
+  display: block;
+}
+.Parameters{
+  border-bottom: 1rpx solid #e5e5e5;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.Parameters view{
+  float: left;
+  width: 50%;
+  font-size: 28rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+.customerService{
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+.customerService::after{ border: none; }
+.ParametersGps{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 4rpx;
+  background-color: #fa4f52;
+  transition: all 0.3s;
+}
+.ParametersGpsLeft{
+  left: 375rpx;
+}
+.ParametersColor text{
+  color: #fa4f52;
+}
+.DetailsAndParameters{
+  min-height: 300rpx;
+  position: relative;
+}
+.noData{
+  padding: 15rpx 0;
+}
+.noData view{
+  font-size:28rpx;
+  padding:15rpx 30rpx;
+  color:#666;
+}
+.DetailsAndParameters .noData image{
+  width: 80%;
+  display: block;
+  height: 80%;
+  margin: 0 auto;
+}
+.DetailsAndParameters image{
+  width: 100%;
+  height: auto;
+}
+.DisplayNormalized{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.DisplayNormalizedBack{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+.scrollOfspecification{
+  height: 45%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1rpx solid #f5f5f5;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+.scrollOfspecificationBtn{
+  position: absolute;
+  bottom: 45%;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.scrollOfspecificationBtn view{
+  height:90rpx;
+  line-height:90rpx;
+  float:left;
+  font-size:34rpx;
+  padding:0 30rpx;
+  color: #999;
+}
+.OfspecificationText{
+  display:block;
+  font-size:28rpx;
+  color:#999;
+  padding:20rpx 0 10rpx 0;
+}
+.OfspecificationFrame{
+  padding:15rpx 0 15rpx 15rpx;
+}
+.OfspecificationFrame label{
+  border:1rpx solid #e5e5e5;
+  display:inline-block;
+  padding:10rpx 30rpx;
+  color:#666;
+  font-size:30rpx;
+  margin-right: 15rpx;
+  border-radius: 5rpx;
+}
+.OfspecificationFrame radio{
+  display: none;
+}
+.OfspecificationFrame .OfspecificationFrameRadio{
+  border-color:#fa4f52;
+  color:#fa4f52;
+  background-color:rgba(250,79,82,0.05);
+}
+.DisplayNormalizedOkText{
+  max-width:500rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.activity{
+  height: auto;
+  line-height: 1;
+  padding: 30rpx 20rpx;
+}
+.activityZen{
+  display: inline-block;
+  background-color: #F4706C;
+  color: white;
+  font-size:30rpx;
+  padding:10rpx;
+  border-radius:5rpx;
+  margin-right: 10rpx;
+}
+.notAvailable{
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+}
+.notAvailable image{
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  margin-top: 80rpx;
+}

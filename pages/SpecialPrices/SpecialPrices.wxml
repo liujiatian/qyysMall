@@ -1,0 +1,146 @@
+<!--pages/SpecialPrices/SpecialPrices.wxml-->
+
+<!-- 滚动区块 -->
+<scroll-view scroll-y scroll-with-animation='true' enable-back-to-top='true' class='viewport'>
+  <!-- 轮播图 -->
+  <swiper class='slideshow' indicator-dots='true' indicator-color='#fff' indicator-active-color='#fa4f52' autoplay='true'>
+    <swiper-item wx:for='{{slideshow}}' wx:key="*this">
+      <image src="{{item}}" class="slideshow-image" data-url='{{item}}' bindtap='slideshowImage'/>
+    </swiper-item>
+  </swiper>
+
+  <!-- 产品名称 -->
+  <view class='productName'>
+    <text>{{productName}}</text>
+  </view>
+
+  <!-- 产品价格 -->
+  <view class='productPrice'>
+    <text class='currentPrice'>￥{{currentPrice}}</text>
+    <text class='originalPrice'>￥{{originalPrice}}</text>
+  </view>
+
+  <!-- 库存/已售 -->
+  <view class='inventorySales'>
+    <text>库存:{{repertory==null?0:repertory}}</text>
+    <text class='fr'>已售出:{{market}}</text>
+  </view>
+
+  <view class='halvingLine'></view>
+
+  <!-- 运输 -->
+  <picker class='singleLink' bindchange="logistics" value="{{index}}" range="{{singleLinkAttr}}">
+    <text>运费(￥{{freight}})</text>
+    <view class='fr rightArrow'>
+      <image src='../../img/rightArrow.png'/>
+    </view>
+    <text class='fr'>{{singleLinkAttr[singleLinkAttrIndex]}}</text>
+  </picker>
+  
+  <view class='halvingLine' wx:if='{{Ofspecification}}'></view>
+  
+  <!-- 规格 -->
+  <view class='singleLink' bindtap="specification" wx:if='{{Ofspecification}}'>
+    <text>选择规格</text>
+    <view class='fr rightArrow'>
+      <image src='../../img/rightArrow.png'/>
+    </view>
+    <text class='fr DisplayNormalizedOkText'>{{DisplayNormalizedOkText}}</text>
+  </view>
+  
+  <view class='halvingLine'></view>
+  
+  <!-- 数量 -->
+  <view class='singleLink'>
+    <text>选择数量</text>
+    <view class='fr quantity'>
+      <view class='quantityTap' bindtap='quantityTapMinus'>-</view>
+      <view class='quantityNull'>{{quantity}}</view>
+      <view class='quantityTap' bindtap='quantityTapAdd'>+</view>
+    </view>
+  </view>
+  
+  <view class='halvingLine'></view>
+  
+  <!-- 评论 -->
+  <view class='singleLink' bindtap='Reviews'>
+    <text>产品评论</text>
+    <view class='fr rightArrow'>
+      <image src='../../img/rightArrow.png'/>
+    </view>
+    <text class='fr'>暂无评论</text>
+  </view>
+  
+  <view class='halvingLine'></view>
+
+  <!-- 详情/参数 -->
+  <view class='Parameters'>
+    <view data-index='0' class='{{Parameters==true?"ParametersColor":""}}' bindtap='Parameters'><text>产品详情</text></view>
+    <view data-index='1' class='{{Parameters==true?"":"ParametersColor"}}' bindtap='Parameters' style='border-left:1rpx solid #e5e5e5;'><text>产品参数</text></view>
+    <view class='ParametersGps {{ParametersGpsLeft}}'></view>
+  </view>
+
+  <!-- 产品详情 -->
+  <view wx:if='{{Parameters}}' class='DetailsAndParameters'>
+    <!-- 引入模板 -->
+    <import src="../..//wxParse/wxParse.wxml"/>
+    <!-- 这里data中article为bindName -->
+    <template is="wxParse" data="{{wxParseData:DetailsOfTheData.nodes}}"/>
+
+    <view class='noData' wx:if='{{DetailsOfTheData}}'>
+      <image src='../../img/anonymous.png' />
+      <text>暂无数据</text>
+    </view>
+  </view>
+
+  <!-- 产品参数 -->
+  <view wx:if='{{!Parameters}}' class='DetailsAndParameters'>
+    <view class='noData' wx:if='{{ProductParameterData}}'>
+      <image src='../../img/anonymous.png' />
+      <text>暂无数据</text>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 底部导航 -->
+<view class='tabbar'>
+  <view class='interlinkage'>
+    <view>
+      <image src='../../img/customerService.png' />
+      <text>客服</text>
+      <button class='customerService' open-type="contact"></button>
+    </view>
+    <view bindtap='shoppingCart'>
+      <image src='../../img/shoppingCart.png' />
+      <text>购物车</text>
+    </view>
+  </view>
+  <view class='operation'>
+    <view style='margin-right:2%;'>
+      <image src='../../img/gouwuc.png' />
+      <text>加入购物车</text>
+    </view>
+    <view style='margin-left:2%;' bindtap='purchaseNow'>
+      <image src='../../img/lijigoum.png' />
+      <text>立即购买</text>
+    </view>
+  </view>
+</view>
+
+<!-- 显示规格 -->
+<view class='DisplayNormalized' wx:if='{{DisplayNormalized}}'>
+  <view class='DisplayNormalizedBack' bindtap='DisplayNormalizedBack'></view>
+  <view class='scrollOfspecificationBtn'>
+    <view bindtap='DisplayNormalizedBack'><text>取消</text></view>
+    <view bindtap='DisplayNormalizedOk' style='float:right;color:#44B549;'><text>确定</text></view>
+  </view>
+  <scroll-view class='scrollOfspecification' scroll-y='true'>
+    <radio-group class="OfspecificationFrame" bindchange="OfspecificationRadio" wx:for='{{specificationAttr}}' wx:key='{{item.uid}}' data-index='{{index}}'>
+      <text class='OfspecificationText'>{{item.name}}</text>
+      <label class='{{item.pitchOn==itemF2.id?"OfspecificationFrameRadio":""}}' wx:for='{{item.attr}}' wx:for-item='itemF2' wx:key='{{itemF2.id}}'>
+        <text>{{itemF2.text}}</text>
+        <radio value='{{itemF2.id}},{{itemF2.text}}'/>
+      </label>
+    </radio-group>
+  </scroll-view>
+</view>
